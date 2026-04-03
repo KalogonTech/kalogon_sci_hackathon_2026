@@ -7,10 +7,6 @@ A repository for the Kalogon-partnered 2026 hackathon in collaboration with Data
 Synthetic sensor telemetry simulating a **Kalogon smart wheelchair cushion** paired with a mobile phone.
 The raw data contains 10 pressure-mat channels, a 6-axis phone IMU, and GPS — all sampled at **10 Hz**.
 
-Physiological signals (heart rate, respiratory rate), clinical events (tilts, transfers), and
-longitudinal trends (weight changes) are **embedded in the raw sensor values** and must be
-discovered through signal processing.
-
 | Stat | Value |
 |------|-------|
 | Rows | 9,445,168 |
