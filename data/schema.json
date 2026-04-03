@@ -1,0 +1,33 @@
+{
+  "table_name": "cushion_telemetry",
+  "description": "Raw sensor telemetry from a Kalogon smart wheelchair cushion paired with a mobile phone. Contains 10 pressure-mat channels, 6-axis phone IMU (accelerometer + gyroscope), and phone GPS — all sampled at 10 Hz.",
+  "row_count": 9445168,
+  "session_count": 113,
+  "sample_rate_hz": 10,
+  "source_format": "Apache Parquet (Snappy compressed)",
+  "columns": [
+    {"name": "timestamp",   "type": "TIMESTAMP", "description": "Sample timestamp at 10 Hz resolution"},
+    {"name": "user_id",     "type": "STRING",    "description": "Anonymized user identifier (UUID)"},
+    {"name": "session_id",  "type": "STRING",    "description": "Unique session identifier (UUID) — one per seated period"},
+    {"name": "p_front_l1",  "type": "FLOAT",     "description": "Pressure sensor — front left zone 1 (mmHg)"},
+    {"name": "p_front_l2",  "type": "FLOAT",     "description": "Pressure sensor — front left zone 2 (mmHg)"},
+    {"name": "p_front_r1",  "type": "FLOAT",     "description": "Pressure sensor — front right zone 1 (mmHg)"},
+    {"name": "p_front_r2",  "type": "FLOAT",     "description": "Pressure sensor — front right zone 2 (mmHg)"},
+    {"name": "p_back_ll",   "type": "FLOAT",     "description": "Pressure sensor — back left lateral (mmHg)"},
+    {"name": "p_back_lc",   "type": "FLOAT",     "description": "Pressure sensor — back left center (mmHg)"},
+    {"name": "p_back_lm",   "type": "FLOAT",     "description": "Pressure sensor — back left medial (mmHg)"},
+    {"name": "p_back_rm",   "type": "FLOAT",     "description": "Pressure sensor — back right medial (mmHg)"},
+    {"name": "p_back_rc",   "type": "FLOAT",     "description": "Pressure sensor — back right center (mmHg)"},
+    {"name": "p_back_rl",   "type": "FLOAT",     "description": "Pressure sensor — back right lateral (mmHg)"},
+    {"name": "acc_x",       "type": "FLOAT",     "description": "Phone accelerometer X-axis (m/s^2)"},
+    {"name": "acc_y",       "type": "FLOAT",     "description": "Phone accelerometer Y-axis (m/s^2)"},
+    {"name": "acc_z",       "type": "FLOAT",     "description": "Phone accelerometer Z-axis (m/s^2)"},
+    {"name": "gyro_x",      "type": "FLOAT",     "description": "Phone gyroscope X-axis (rad/s)"},
+    {"name": "gyro_y",      "type": "FLOAT",     "description": "Phone gyroscope Y-axis (rad/s)"},
+    {"name": "gyro_z",      "type": "FLOAT",     "description": "Phone gyroscope Z-axis (rad/s)"},
+    {"name": "latitude",    "type": "DOUBLE",    "description": "GPS latitude (decimal degrees)"},
+    {"name": "longitude",   "type": "DOUBLE",    "description": "GPS longitude (decimal degrees)"},
+    {"name": "speed_mph",   "type": "FLOAT",     "description": "GPS-derived ground speed (miles per hour)"},
+    {"name": "altitude_m",  "type": "FLOAT",     "description": "GPS altitude above sea level (meters)"}
+  ]
+}
